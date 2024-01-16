@@ -5,4 +5,3 @@ let app = new Vue({
         desc:"A pair of warm, fuzzy socks.",
     }
  })
- 
