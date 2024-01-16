@@ -98,7 +98,8 @@ textarea {
     bottom: 8px;
 }
 
-.lnk{
-    position: relative;
-    top: 20px;
+.nav{
+    height: 90px;
+    background: linear-gradient(90deg, #218b44, #3cdd9a);
+    margin-bottom: 30px;
 }
