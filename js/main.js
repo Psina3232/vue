@@ -17,7 +17,7 @@ Vue.component('product', {
                 <p v-if="onSale">on sale</p>
                 <p v-if="inStock">In stock</p>
                 <p v-else :class="{ outOfStock: !inStock }">Out of Stock</p>
-                <div class="color-box" @mouseover="updateProduct(index)" :style="{ backgroundColor:variant.variantColor }" v-for="(variant, index) in variants" :key="variant.variantId"></div>
+                <div class="color-box" @click="updateProduct(index)" :style="{ backgroundColor: variant.variantColor }" v-for="(variant, index) in variants" :key="variant.variantId"></div>
                 <div v-for="size in sizes">
                     <p>{{ size }}</p>
                 </div>
@@ -242,12 +242,6 @@ let app = new Vue({
             if (index !== -1) {
               this.cart.splice(index, 1);
             }
-        },
-        removeItem(id) {
-            for(var i = this.cart.length - 1; i >= 0; i--) {
-              if (this.cart[i] === id) {
-                 this.cart.splice(i, 1);
-                  }}
-}
+        }
 }
 })
